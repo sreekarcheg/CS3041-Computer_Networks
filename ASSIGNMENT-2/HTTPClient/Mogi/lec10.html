@@ -1,0 +1,36 @@
+
+
+<HTML>
+<HEAD>
+<TITLE>
+CS425: Computer Networks: Lecture 10
+</TITLE>
+</HEAD>
+<a NAME="top"></A>
+<BODY TEXT="BLACK" BGCOLOR="#ffffff">
+<center>
+<h1>Computer Networks (CS425)</h1>
+<h3>Instructor: Dr. Dheeraj Sanghi</h3>
+</center>
+
+<A HREF="lec09.html">Prev</a>|
+<A HREF="lec11.html">Next</A>|
+<A HREF="./index.html">Index</A>
+<HR COLOR=black>
+<center><h2>Network Layer</h2></center>
+<h3>What is Network Layer?</h3>
+The network layer is concerned with getting packets from the source all the way to the destination. The packets may require to make many hops at the intermediate routers while reaching the destination. This is the lowest layer that deals with end to end transmission. In order to achieve its goals, the network layer must know about the topology of the communication network. It must also take care to choose routes to avoid overloading of some of the communication lines while leaving others idle. The network layer-transport layer interface frequently is the interface between the carrier and the customer, that is the boundary of the subnet. The functions of this layer include :
+<ol>
+<li>Routing - The process of transferring packets received from the Data Link Layer of the source network to the Data 
+Link Layer of the correct destination network is called routing. Involves decision making at each intermediate node on
+where to send the packet next so that it eventually reaches its destination. The node which makes this choice is called
+a router. For routing we require some mode of addressing which is recognized by the Network Layer. This addressing is 
+different from the MAC layer addressing.
+<li>Inter-networking - The network layer is the same across all physical networks (such as Token-Ring and Ethernet). 
+Thus, if two physically different networks have to communicate, the packets that arrive at the Data Link Layer of the
+ node which connects these two physically different networks, would be stripped of their headers and passed to the 
+Network Layer. The network layer would then pass this data to the Data Link Layer of the other physical network..
+<li>Congestion Control - If the incoming rate of the packets arriving at any router is more than the outgoing rate,
+then congestion is said to occur. Congestion may be caused  by many factors.  If suddenly, packets begin arriving on
+many input lines and all need the same output line, then a queue will build up. If there is insufficient memory to 
+hold all of

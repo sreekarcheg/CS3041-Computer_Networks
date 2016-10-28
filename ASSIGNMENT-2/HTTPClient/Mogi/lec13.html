@@ -1,0 +1,32 @@
+
+
+<HTML>
+<HEAD>
+<TITLE>
+CS425: Computer Networks: Lecture 13
+</TITLE>
+</HEAD>
+<a NAME="top"></A>
+<BODY TEXT="BLACK" BGCOLOR="#ffffff">
+<center>
+<h1>Computer Networks (CS425)</h1>
+<h3>Instructor: Dr. Dheeraj Sanghi</h3>
+</center>
+
+<A HREF="lec12.html">Prev</a>|
+<A HREF="lec14.html">Next</A>|
+<A HREF="./index.html">Index</A>
+<HR COLOR=black>
+<center><h2>ARP,RARP,ICMP Protocols</h2></center>
+<h3>Address Resolution Protocol</h3>
+If a machine talks to another machine in the same network, it requires its physical or MAC address.
+But ,since the application has given the destination's IP address it requires some mechanism to bind 
+the IP address with its MAC address.This is done through Address Resolution protocol (ARP).IP address 
+of the destination node is broadcast and the destination node informs the source of its MAC address.
+<ol>
+<li>Assume broadcast nature of LAN
+<li>Broadcast IP address of the destination
+<li>Destination replies it with its MAC address.
+<li>Source maintains a cache of IP and MAC address bindings
+</ol>
+But this means that every time machine A wants t

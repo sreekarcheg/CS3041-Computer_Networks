@@ -1,0 +1,40 @@
+
+
+<HTML>
+<HEAD>
+<TITLE>
+CS425: Computer Networks: Lecture 11
+</TITLE>
+</HEAD>
+<a NAME="top"></A>
+<BODY TEXT="BLACK" BGCOLOR="#ffffff">
+<center>
+<h1>Computer Networks (CS425)</h1>
+<h3>Instructor: Dr. Dheeraj Sanghi</h3>
+</center>
+
+<A HREF="lec10.html">Prev</a>|
+<A HREF="lec12.html">Next</A>|
+<A HREF="./index.html">Index</A>
+
+<HR COLOR=black></HR>
+<center><h2>Network Layer (Continued...)</h2></center><p>
+The network layer is concerned with getting packets from the source all the way to the destnation. The packets may require to make many hops at the intermediate routers while reaching the destination. This is the lowest layer that deals with end to end transmission. In order to achieve its goals, the network later must know about the topology of the communication network. It must also take care to choose routes to avoid overloading of some of the communication lines while leaving others idle. The main functions performed by the network layer are as follows:
+<ul>
+<li>Routing
+<li>Congestion Control
+<li>Internetwokring
+</ul>
+
+<h3>Routing</h3>
+Routing is the process of forwarding of a packet in a network so that it reaches its intended destination. The main goals of routing are:
+<ol>
+<li><b>Correctness: </b>The routing should be done properly and correctly so that the packets may reach their proper destination.
+<li><b>Simplicity: </b>The routing should be done in a simple manner so that the overhead is as low as possible. With increasing complexity of the routing algorithms the overhead also increases.
+<li><b>Robustness: </b>Once a major network becomes operative, it may be expected to run continuously for years without any failures. The algorithms designed for routing should be robust enough to handle hardware and software failures and should be able to cope with changes in the topology and traffic without requiring all jobs in all hosts to be aborted and the network rebooted every time some router goes down.
+<li><b>Stability: </b>The routing algorithms should be stable under all possible circumstances.
+<li><b>Fairness: </b>Every node connected to the network should get a fair chance of transmitting their packets. This is generally done on a first come first serve basis.
+<li><b>Optimality: </b>The routing  algorithms should be optimal in terms of throughput and minimizing mean packet delays. Here there is a trade-off and one has to choose depending on his suitability.
+</ol>
+
+<h3>Classification of Routing 

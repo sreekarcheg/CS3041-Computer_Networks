@@ -1,0 +1,32 @@
+
+
+<HTML>
+<HEAD>
+<TITLE>
+ CS425: Computer Networks: Lecture 08
+</TITLE>
+</HEAD>
+<a NAME="top"></A>
+<BODY TEXT="BLACK" BGCOLOR="#ffffff">
+<center>
+<h1>Computer Networks (CS425)</h1>
+<h3>Instructor: Dr. Dheeraj Sanghi</h3>
+</center>
+
+<A HREF="lec07.html">Prev</a>|
+<A HREF="lec09.html">Next</A>|
+<A HREF="./index.html">Index</A>
+
+<HR COLOR=black></HR>
+<center><h2>Token Ring Network (Contd...)</h2></center><p>
+<h3>
+<b>Phase Jitter Compensation :</b></h3>
+In a token ring the source starts discarding all it's previously transmitted
+bits as soon as they circumnavigate the ring and reach the source. Hence,
+it's not desirable that while a token is being sent some bits of the token
+which have already been sent become available at the incoming end of the
+source. This behavior though is desirable in case of data packets which
+ought to be drained from the ring once they have gone around the ring.
+To achieve the aforesaid behavior with respect to tokens, we would like
+the ring to hold at least 24 bits at a time. How do we ensure this?
+<p>Each node in a ring introduces a 1 bit delay

@@ -1,0 +1,64 @@
+
+
+<HTML>
+<HEAD>
+<TITLE>
+ CS425: Computer Networks: Lecture 03
+</TITLE>
+</HEAD>
+<a NAME="top"></A>
+<BODY TEXT="BLACK" BGCOLOR="#ffffff">
+<center>
+<h1>Computer Networks (CS425)</h1>
+<h3>Instructor: Dr. Dheeraj Sanghi</h3>
+</center>
+
+<A HREF="lec02.html">Prev</a>|
+<A HREF="lec04.html">Next</A>|
+<A HREF="./index.html">Index</A>
+
+<HR COLOR=black></HR>
+
+<center><u><h2>Data Encoding</h2></u></center>
+
+<h3>Digital data to analog signals</h3> A modem (modulator-demodulator) converts digital data to analog signal. 
+There are 3 ways to modulate a digital signal on an analog carrier signal.
+<ol>
+<li><b>Amplitude shift keying (ASK):</b> is a form of modulation which represents digital data as variations in 
+the amplitude of a carrier wave. Two different amplitudes of carrier frequency represent '0' , '1'. 
+<br>
+<center>
+<img src="./fig.lec03/ask.gif">
+</center>
+<BR>
+<li><b>Frequency shift keying (FSK):</b> In Frequency Shift Keying, the change in frequency define different digits. 
+Two different frequencies near carrier frequency represent '0' ,''1'.
+<br>
+<center>
+<img src="./fig.lec03/fsk.gif">
+</center>
+<BR>
+<li><b>Phase shift keying (PSK):</b> The phase of the carrier is discretely varied in relation either to a reference 
+phase or to the phase of the immediately preceding signal element, in accordance with data being transmitted. Phase 
+of carrier signal is shifted to represent '0' , '1'. 
+<br>
+<center>
+<img src="./fig.lec03/psk.png">
+</center>
+<BR>
+</ol>
+<h3> Digital data to digital signals</h3>
+A digital signal is sequence of discrete , discontinuous voltage pulses. Each pulses a signal element. Encoding scheme is an important factor in how successfully the receiver interprets the incoming signal.
+<P><h3>Encoding Techniques</h3>Following are several ways to map data bits to signal elements.
+<ul>
+<li><B>Non return to zero(NRZ)</B> NRZ codes share the property that voltage level is constant during a bit interval. 
+High level voltage = bit 1 and Low level voltage = bit 0. A problem arises when there is a long
+sequence of 0s or 1s and the volatage level is maintained at the same value for a long time. This creates a problem on
+the recieving end because now, the clock synchronization is lost due to lack of any transitions and hence, it is difficult
+to determine the exact number of 0s or 1s in this sequence.
+<br>
+<center>
+<img src="./fig.lec03/nrz-run.gif">
+</center>
+<BR>
+The two variatio

@@ -1,0 +1,55 @@
+
+
+<HTML>
+<HEAD>
+<TITLE>
+ CS425: Computer Networks: Lecture 09
+</TITLE>
+</HEAD>
+<a NAME="top"></A>
+<BODY TEXT="BLACK" BGCOLOR="#ffffff">
+<center>
+<h1>Computer Networks (CS425)</h1>
+<h3>Instructor: Dr. Dheeraj Sanghi</h3>
+</center>
+
+<A HREF="lec08.html">Prev</a>|
+<A HREF="lec10.html">Next</A>|
+<A HREF="./index.html">Index</A>
+
+<HR COLOR=black></HR>
+<center><h2>Data Link Layer</h2></center><p>
+<h3>
+<b>What is DLL(Data Link Layer)</b></h3>
+The Data Link Layer is the second layer in the OSI model, above the Physical Layer, which ensures that
+the error free data is transferred between the adjacent nodes in the network.	It breaks the datagrams passed down 
+by above layers and convert them into frames ready for transfer. This is called Framing. It provides two main functionalities
+<ul>
+<li>Reliable data transfer service between two peer network layers
+<li>Flow Control mechanism which regulates the flow of frames such that data congestion 
+is not there at slow receivers due to fast senders.
+</ul>
+<b><h3>What is Framing?</h3></b>
+Since the physical layer merely accepts and transmits a stream of bits without any 
+regard to meaning or structure, it is upto the data link layer to create and recognize
+frame boundaries. This can be accomplished by attaching special bit patterns to the beginning and
+end of the frame. If these bit patterns can accidentally occur in data, special care must be taken
+to make sure these patterns are not incorrectly interpreted as frame delimiters.
+The four framing methods that are widely used are
+<ul>
+<li>Character count
+<li>Starting and ending characters, with character stuffing
+<li>Starting and ending flags, with bit stuffing
+<li>Physical layer coding violations
+</ul>
+<h4>Character Count</h4>
+This method uses a field in the header to specify the number of characters in the frame. 
+When the data link layer at the destination sees the character count,it knows how 
+many characters follow, and hence where the end of the frame is. The disadvantage is 
+that if the count is garbled by a transmission error, the destination will lose 
+synchronization and will be unable to locate the start of the next frame. So, this
+method is rarely used.
+<h4>Character stuffing</h4>
+In the second method, each frame starts with the ASCII character sequence 
+DLE STX and ends with the sequence DLE ETX.(where DLE is Data Link Escape, 
+STX is Start of TeXt and ETX is End of TeXt.) This method overcom

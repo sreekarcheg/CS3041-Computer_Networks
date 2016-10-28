@@ -1,0 +1,71 @@
+
+
+<HTML>
+<HEAD>
+<TITLE>
+CS425: Computer Networks: Lecture 12
+</TITLE>
+</HEAD>
+<a NAME="top"></A>
+<BODY TEXT="BLACK" BGCOLOR="#ffffff">
+<center>
+<h1>Computer Networks (CS425)</h1>
+<h3>Instructor: Dr. Dheeraj Sanghi</h3>
+</center>
+
+<A HREF="lec11.html">Prev</a>|
+<A HREF="lec13.html">Next</A>|
+<A HREF="./index.html">Index</A>
+<HR COLOR=black>
+<center><h2>Routing Algorithms</h2></center>
+<h3>Non-Hierarchical Routing</h3>
+In this type of routing, interconnected networks are viewed as a single network, where bridges, routers and gateways are just additional nodes.
+<ul>
+<li>Every node keeps information about every other node in the network
+<li>In case of adaptive routing, the routing calculations are done and updated for all the nodes. 
+</ul>
+The above two are also the disadvantages of non-hierarchical routing, since the table sizes and the routing calculations become too large as the networks get bigger.  So this type of routing is feasible only for small networks.
+
+<h3>Hierarchical Routing</h3>
+This is essentially a 'Divide and Conquer' strategy. The network is divided into different regions and a router for a particular region knows only about its own domain and other routers. Thus, the network is viewed at two levels:
+<ol>
+<li>The Sub-network level, where each node in a region has information about its peers in the same region and about the region's interface with other regions. Different regions may have different 'local' routing algorithms. Each local algorithm handles the traffic between nodes of the same region and also directs the outgoing packets to the appropriate interface.
+<li>The Network Level, where each region is considered as a single node connected to its interface nodes. The routing algorithms at this level handle the routing of packets between two interface nodes, and is isolated from intra-regional transfer.
+</ol>
+Networks can  be organized in hierarchies of many levels; e.g. local networks of a city at one level, the cities of a country at a level above it, and finally  the network of all nations.
+<p>
+In Hierarchical routing, the interfaces need to store information about:
+<ul>
+<li>All nodes in its region which are at one level below it. 
+<li>Its peer interfaces. 
+<li>At least one interface at a level above it, for outgoing packages.
+</ul>
+Advantages of Hierarchical Routing : 
+<ul>
+<li>Smaller sizes of routing tables. 
+<li>Substantially lesser calculations and updates of routing tables. 
+</ul>
+Disadvantage : 
+<ul>
+<li>Once the hierarchy is imposed on the network, it is followed and possibility of direct paths is ignored. This may lead to sub optimal routing.
+</ul>
+
+<h3>Source Routing</h3>
+Source routing is similar in concept to virtual circuit routing. It is implemented as under:
+<ul>
+<li>Initially, a path between nodes wishing to communicate is found out, either by flooding or by any other suitable method.
+<li>This route is then specified in the header of each packet routed between these two nodes. A route may also be specified partially, or in terms of some intermediate hops.
+</ul>
+Advantages:
+<ul>
+<li>Bridges do not need to lookup their routing tables since the path is already specified in the packet itself.
+<li>The throughput of the bridges is higher, and this may lead to better utilization of bandwidth, once a route is established.
+</ul>
+Disadvantages:
+<ul>
+<li>Establishing the route at first needs an expensive search method like flooding. 
+<li>To cope up with dynamic relocation of nodes in a network, frequent updates of tables are required, else all packets would be sent in wrong direction. This too is expensive.
+</ul>
+
+<h3>Policy Based Routing</h3>
+In this type of routing, certain restrictions are put on the type of packets accepted and sent. e.g.. The IIT- K router may decide to handle t
