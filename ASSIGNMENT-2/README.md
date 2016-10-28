@@ -8,7 +8,7 @@ and a port not in current use. This simulates a server. The server then awaits f
 
 ##Screenshots
 ![ScreenShot 1](https://github.com/sreekarcheg/CS3041-Computer_Networks/blob/master/ASSIGNMENT-2/ScreenShot1.png)
-![ScreenShot 2](https://github.com/sreekarcheg/CS3041-Computer_Networks/blob/master/ASSIGNMENT-2/ScreenShot1.png)
+![ScreenShot 2](https://github.com/sreekarcheg/CS3041-Computer_Networks/blob/master/ASSIGNMENT-2/ScreenShot2.png)
 
 ##Implementation details
 - TCP socket is created and bound to localhost and port -Server listens for requests
