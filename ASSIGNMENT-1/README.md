@@ -24,8 +24,8 @@ The message is interpreted as: [0-2]: "UDP",  [3-18]: destAddr, [19-22]: port Nu
 
 
 ##Rules: 
-1)The message should be a string of atleast 55 characters
-2)The message string should adhere to the message semantics specified
+1. The message should be a string of atleast 55 characters
+2. The message string should adhere to the message semantics specified
 
 
 
@@ -34,25 +34,25 @@ The message is interpreted as: [0-2]: "UDP",  [3-18]: destAddr, [19-22]: port Nu
 
 ##Control flow/Program execution:
 The program calls the function ping(host), which does the following:
-1)Calls the doOnePing(host) handler that handles a round trip of the packet, and returns the time taken for the round trip
-2)Prints a message stating the ID(starting from 1) of the packet and the RTT
-3)If the RTT exceeds timeout, print the message ‘Timeout’
-4)Update the maxRTT and/or minRTT if necessary
-5)Follow the above sequence for 10 packets, each with a gap of 1 second between them.
+1. Calls the doOnePing(host) handler that handles a round trip of the packet, and returns the time taken for the round trip
+2. Prints a message stating the ID(starting from 1) of the packet and the RTT
+3. If the RTT exceeds timeout, print the message ‘Timeout’
+4. Update the maxRTT and/or minRTT if necessary
+5. Follow the above sequence for 10 packets, each with a gap of 1 second between them.
 
-```doOnePing(host)```
+`doOnePing(host)`
 
 The function creates a socket, calls sendOnePing and then recieveOnePing and then returns the RTT
 
-```sendOneping```
+`sendOneping`
 
 Send a ping message by encoding the appropriate message on the string
 
-```recieveOnePing```
+`recieveOnePing`
 
 Receive a packet and parse the message received. Return the RTT
 
-```printStats()```
+`printStats()`
 
 Print the aggregate statistics once 10 packets are sent.
 
@@ -65,9 +65,9 @@ Create the server message and send it to the address unpacked from the incoming 
 
 #Running
 
-1) First run the server program as such:
-```$python server.py x y```
+1. First run the server program as such:
+`$python server.py x y`
 	(0<=x<=10)
 
-2) Then open a new terminal. Then run the client program as such:
-```$python client.py```
+2. Then open a new terminal. Then run the client program as such:
+`$python client.py`
