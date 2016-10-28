@@ -41,15 +41,19 @@ The program calls the function ping(host), which does the following:
 5)Follow the above sequence for 10 packets, each with a gap of 1 second between them.
 
 ```doOnePing(host)```
+
 The function creates a socket, calls sendOnePing and then recieveOnePing and then returns the RTT
 
 ```sendOneping```
+
 Send a ping message by encoding the appropriate message on the string
 
 ```recieveOnePing```
+
 Receive a packet and parse the message received. Return the RTT
 
 ```printStats()```
+
 Print the aggregate statistics once 10 packets are sent.
 
 
