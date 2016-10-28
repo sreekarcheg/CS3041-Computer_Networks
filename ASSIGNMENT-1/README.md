@@ -19,7 +19,8 @@ The messages are encoded as strings. This was because, at a lower level, Python 
 The message should be a string of at least 55 characters. The upper bound of the number of characters is fixed by the size of packet permitted. The first 54 characters can be interpreted as header, with information packed into it. All characters that follow constitute the user data. If the user data is empty, it shall be encoded as  “_/\_”(without quotes)
 
 
-##Message semantics:  The message is interpreted as: [0-2]: "UDP",  [3-18]: destAddr, [19-22]: port Number,  [23-48]: timestamp, [49-54]: platform of the host/server,  [55: ]: user message ([x-y]: Index x to index y, both included. String is 0-indexed)
+##Message semantics:  
+The message is interpreted as: [0-2]: "UDP",  [3-18]: destAddr, [19-22]: port Number,  [23-48]: timestamp, [49-54]: platform of the host/server,  [55: ]: user message ([x-y]: Index x to index y, both included. String is 0-indexed)
 
 
 ##Rules: 
